@@ -55,12 +55,20 @@ namespace Text_Editor
 
         private void saveFileBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if (fileDialogName != "")
+            {
+                File.WriteAllText(fileDialogName, fileSpaceBox.Text);
+            }
         }
 
         private void fileSpaceBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
-
+            if (e.Key == Key.Enter)
+            {
+                var caretIndex = fileSpaceBox.CaretIndex;
+                fileSpaceBox.Text = fileSpaceBox.Text.Insert(caretIndex, "\n");
+                fileSpaceBox.CaretIndex = caretIndex + 1;
+            }
         }
     }
 }
