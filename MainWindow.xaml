@@ -9,5 +9,8 @@
     <Grid>
         <Button Name="openFileBtn" Click="openFileBtn_Click" Content="Open a Text File" Margin="46,78,987,0" VerticalAlignment="Top" Width="117" Height="38"/>
         <Button Name="saveFileBtn" Click="saveFileBtn_Click" Content="save a Text File" Margin="46,153,987,0" VerticalAlignment="Top" Width="117" Height="38"/>
+        <TextBox Name="fileSpaceBox" BorderBrush="Black" BorderThickness="1" VerticalScrollBarVisibility="Auto" FontSize="14" KeyDown="fileSpaceBox_KeyDown" HorizontalAlignment="Left" Height="321" Margin="292,51,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="785"/>
+        <TextBlock Name="fileNameBlock" Background="LightGray" FontSize="14" ScrollViewer.HorizontalScrollBarVisibility="Auto" HorizontalAlignment="Left" Margin="292,21,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="785" Height="25"/>
+        <TextBlock HorizontalAlignment="Left" Margin="617,8,0,0" TextWrapping="Wrap" Text="File Name:" VerticalAlignment="Top"/>
     </Grid>
 </Window>
